@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise ❤️</title>
+
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<style>
+
+
+@keyframes slideLeft {
+
+from{
+transform: translateX(-100px);
+opacity:0;
+}
+
+to{
+transform: translateX(0);
+opacity:1;
+}
+
+}
+
+
+
+@keyframes slideRight {
+
+from{
+transform: translateX(100px);
+opacity:0;
+}
+
+to{
+transform: translateX(0);
+opacity:1;
+}
+
+}
+
+
+
+.animate-left{
+
+animation: slideLeft 1s ease;
+
+}
+
+
+
+.animate-right{
+
+animation: slideRight 1s ease;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body class="min-h-screen flex items-center justify-center 
+bg-gradient-to-br from-pink-400 via-purple-400 to-indigo-500">
+
+
+
+
+
+<!-- PAGE 1 -->
+
+
+<div id="page1" 
+class="page text-center text-black">
+
+
+<img src="kona5.jpeg"
+
+class="w-64 h-64 mx-auto mb-8 
+rounded-full object-cover 
+shadow-2xl border-4 border-white">
+
+
+
+<h1 class="text-5xl font-bold mb-6">
+
+হে কেশবতী... ❤️
+
+</h1>
+
+
+
+<p class="text-xl mb-10">
+
+এই ছোট্ট কর্নারে আপনাকে স্বাগতম ✨
+
+</p>
+
+
+
+<button onclick="nextPage(2)"
+
+class="bg-white text-pink-600 px-10 py-4 
+rounded-full text-xl font-bold shadow-lg 
+hover:scale-110 transition">
+
+
+Click Here 🎁
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PAGE 2 -->
+
+
+<div id="page2" 
+
+class="page hidden text-center text-black">
+
+
+<h1 class="text-4xl font-bold mb-8">
+
+সুন্দরী❤️
+
+</h1>
+
+
+
+
+
+<div class="grid grid-cols-2 gap-5 justify-center">
+
+
+
+<img src="kona6.jpeg"
+
+class="w-40 h-40 object-cover rounded-2xl 
+shadow-lg border-4 border-white 
+animate-left">
+
+
+
+
+
+<img src="kona3.jpeg"
+
+class="w-40 h-40 object-cover rounded-2xl 
+shadow-lg border-4 border-white 
+animate-right">
+
+
+
+
+
+<img src="kona9.jpeg"
+
+class="w-40 h-40 object-cover rounded-2xl 
+shadow-lg border-4 border-white 
+animate-left">
+
+
+
+
+
+<img src="kona8.jpeg"
+
+class="w-40 h-40 object-cover rounded-2xl 
+shadow-lg border-4 border-white 
+animate-right">
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="mt-10 flex gap-5 justify-center">
+
+
+
+<button onclick="prevPage(1)"
+
+class="bg-white text-purple-600 px-8 py-3 
+rounded-full font-bold">
+
+
+Previous
+
+
+</button>
+
+
+
+
+
+<button onclick="nextPage(3)"
+
+class="bg-white text-purple-600 px-8 py-3 
+rounded-full font-bold">
+
+
+Next 💝
+
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PAGE 3 -->
+
+
+
+<div id="page3"
+
+class="page hidden text-center text-black">
+
+
+
+
+
+<img src="kona2.jpeg"
+
+class="w-72 h-72 mx-auto rounded-full 
+object-cover shadow-2xl mb-8 
+border-4 border-white">
+
+
+
+
+
+
+<h1 class="text-5xl font-bold mb-5">
+
+
+শুভ জন্মদিন আপু 🎂❤️
+
+
+</h1>
+
+
+
+
+
+
+<p class="text-xl leading-relaxed">
+
+
+মানুষের মধ্যে দ্বিজত্ব আছে; <br>
+
+মানুষ একবার জন্মায় গর্ভের মধ্যে,
+
+<br>
+
+আবার জন্মায় মুক্ত পৃথিবীতে…
+
+<br>
+
+মানুষের এক জন্ম আপনাকে নিয়ে,
+
+<br>
+
+আর এক জন্ম সকলকে নিয়ে
+
+
+<br>
+
+- হুমায়ূন আহমেদ
+
+
+
+</p>
+
+
+
+
+
+
+
+
+<div class="mt-10">
+
+
+
+<button onclick="prevPage(2)"
+
+class="bg-white text-pink-600 px-8 py-3 
+rounded-full font-bold">
+
+
+
+Previous
+
+
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+function nextPage(page){
+
+
+document.querySelectorAll(".page")
+
+.forEach(p=>p.classList.add("hidden"));
+
+
+
+document.getElementById("page"+page)
+
+.classList.remove("hidden");
+
+
+
+}
+
+
+
+
+
+function prevPage(page){
+
+
+document.querySelectorAll(".page")
+
+.forEach(p=>p.classList.add("hidden"));
+
+
+
+document.getElementById("page"+page)
+
+.classList.remove("hidden");
+
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
